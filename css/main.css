@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+img {
+    width: 100%;
+}
+
+.title h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.02rem;
+}
+.title h2 {
+    font-weight: 900;
+    font-size: 34.4px;
+    color: #313c4c;
+    text-transform: capitalize;
+}
+
+
+/* LOADER */
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: 4px solid #f12341;
+    animation: loader 2s infinite ease;
+}
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #f12341;
+    animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
+/* END LOADER */
+
+/* ==================== NAVIGATION ==================  */
+.navbar {
+    padding: 1.5rem;
+    background: #fff;
+}
+.navbar .navbar-brand {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #111;
+}
+.navbar .toggler-icon {
+    width: 2.75rem;
+    height: 0.5rem;
+    background-color: #222;
+    margin-bottom: 0.25rem;
+}
+
+.navbar .nav-item {
+    padding: 0.5rem;
+}
+.navbar .nav-link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+}
+.navbar .btn {
+    background: #f12341;
+    padding: 0.5rem 1.75rem;
+}
+.navbar .btn a {
+    color: #fff;
+}
+
+/* ====== END ======  */
+
+
+/* ==================== HERO ==================  */
+.hero-wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/img/pexels-marily-torres-776615.jpg') no-repeat center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.hero .container h2{
+    font-size: 5rem;
+    font-weight: 900;
+    width: 70%;
+    color: #fff;
+}
+.hero .container h5 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.hero .container .btn {
+    border: 0.1rem solid #f12341;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #f12341;
+    transition: 0.5s linear;
+}
+.hero .container .btn:hover {
+    background: transparent;
+}
+
+.show-services {
+    position: absolute;
+    bottom: -15%;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+}
+.show-services .row .col-md-4:nth-child(2),
+.show-services .row .col-md-4:nth-child(3)
+ {
+    border-left: 0.1rem solid #ccc;
+}
+
+.show-services .col-md-4 {
+    min-height: 20vh;
+    display: flex;
+    padding-top: 2rem;
+}
+.show-services .col-md-4 i {
+    padding-right: 1.5rem;
+    align-self: flex-start;
+    font-size: 3rem;
+    color: #f12341;
+}
+.show-services .col-md-4 h6 {
+    font-size: 1.5rem;
+    color: #232e42;
+}
+/* ====== END ======  */
+
+
+/* ==================== ABOUT ==================  */
+.about {
+    padding-top: 10rem !important;
+}
+.about .title h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.02rem;
+    color: tomato;
+}
+.about .title h2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #313c4c;
+    text-transform: capitalize;
+
+}
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+}
+.about .btn {
+    border: 0.2rem solid #f12341;
+    background-color: #f12341;
+    color: #fff;
+    padding: 0.5rem 1.75rem;
+    transition: 0.4s linear;
+}
+.about .btn:hover {
+    background-color: transparent;
+    color: #111;
+    
+}
+/* ====== END ======  */
+
+
+/* ==================== SERVICES ==================  */
+.services {
+    background: #ccc;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+.services .title h2 {
+    font-size: 4rem;
+}
+.services .content {
+    color: #232e42;
+    font-size: 1.25rem;
+}
+.services i {
+    color: #f12341;
+    font-weight: 900;
+    padding-right: 0.1rem;
+}
+.services .btn {
+    border: 0.2rem solid #f12341;
+    background-color: #f12341;
+    color: #fff;
+    padding: 0.5rem 1.75rem;
+    transition: 0.4s linear;
+}
+.services .card-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.services .card-cont .card {
+    flex-basis: 25%;
+    min-width: 250px;
+}
+.services .row .col-md-6:nth-child(1) {
+    align-self: center;
+}
+.services .card .image {
+    min-height: 15rem;
+}
+.services .card .image img {
+    height: 100%;
+    object-fit: cover;
+}
+.services .card .card-body h5 {
+    font-size: 1.25rem;
+    padding-bottom: 4rem;
+}
+.services .card .card-body a {
+    padding-left: 1rem;
+    color: burlywood;
+    font-size: 1rem;
+}
+
+/* ====== END ======  */
+
+
+/* ==================== TESTIMONIALS ==================  */
+.testimonials i {
+    font-size: 2rem;
+}
+
+/* ====== END ======  */
+
+
+/* ==================== ACTION ==================  */
+.action {
+    padding: 5rem;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/img/pexels-andrea-piacquadio-3974762.jpg') no-repeat center;
+}
+.action h3 {
+    font-size: 3rem;
+    color: #fff;
+    width: 75%;
+}
+.action .btn {
+    background: #f12341;
+    padding: 0.75rem 2.75rem;
+    color: #fff;
+    font-size: 1.25rem;
+}
+/* ====== END ======  */
+
+/* ==================== BLOG ==================  */
+.blog {
+    padding: 5rem;
+}
+.blog .card .image {
+    position: relative;
+    overflow: hidden;
+}
+.blog .card .image img{
+    transition: 1s linear;
+}
+.blog .card .image .date {
+    position: absolute;
+    top: 0;
+    background: #f12341;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    color: #ddd;
+    font-weight: 500;
+}
+.blog .card .card-body h5 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 0.01rem;
+    font-weight: 600;
+    color: dimgrey;
+}
+.blog .card .card-body p {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+.blog .card .card-body a {
+    color: rgb(250, 157, 126);
+}
+.blog .card:hover img {
+    transform: scale(1.5);
+    transition: 1s linear;
+}
+/* ====== END ======  */
+
+
+/* ==================== ABOUT US PAGE ==================  */
+/* hero-small */
+.hero-sm {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/img/pexels-andrea-piacquadio-3974762.jpg') no-repeat center center;
+    height: 40vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-sm .container h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 3.25rem;
+}
+.container-fluid span {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #777;
+    font-family: fantasy;
+}
+.container-fluid h4 {
+    font-weight: 700;
+}
+
+/* about */
+.bg-grey {
+    background: #ccc;
+}
+.bg-grey .icons {
+    border-top: 0.2rem solid #f12341;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.bg-grey .icons .p-2 {
+    display: flex;
+}
+.bg-grey .icons .p-2 i {
+    font-size: 2.75rem;
+    color: #f12341;
+    align-self: center;
+    padding-right: 1rem;
+}
+.bg-grey .icons .p-2 h6 {
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+.bg-grey .icons .p-2 h6 span {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+.bg-grey .icons .p-2:nth-child(2) {
+    border-left: 0.2rem solid #f12341;
+}
+/* our team */
+.card .image {
+    position: relative;
+    overflow: hidden;
+}
+.card .image .details {
+    position: absolute;
+    left: -20%;
+    bottom: 0;
+    background: chocolate;
+    padding: 1rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s linear;
+}
+.card .image .details i {
+    padding: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+.card:hover .details {
+    left: 0;
+}
+/* ====== END ======  */
+
+/* ==================== CONTACT PAGE ==================  */
+.about.contact-page {
+    padding-top: 1rem !important;
+}
+.about.contact-page .icons .d-flex{
+    margin-bottom: 1rem;
+}
+.about.contact-page .icons i {
+    align-self: center;
+    padding-right: 1.5rem;
+    font-size: 1.75rem;
+}
+.about.contact-page .icons h6 {
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+}
+.about.contact-page .icons h6 span {
+    text-transform: lowercase;
+    color: #777;
+    font-weight: lighter;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.about.contact-page .icons h6 span:hover {
+    text-decoration: underline;
+    color: #00acee;
+}
+.about.contact-page .col-md-6 {
+    align-self: center;
+}
+/* ====== END ======  */
+
+/* ==================== HERO ==================  */
+/* ====== END ======  */
+
+/* ==================== FOOTER ==================  */
+footer {
+    background-color: #111;
+}
+footer h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+footer .f-about h2 {
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.f-about h6 {
+    font-size: 1rem;
+    color: #aaa;
+    width: 90%;
+}
+footer .list a {
+    color: #999;
+    font-size: 12px;
+}
+footer .list a:hover {
+    color: #fff;
+}
+footer .icons i {
+    border-radius: 50%;
+    padding: 0.65rem;
+    margin: 0.25rem;
+}
+footer .f-social .contact p {
+    font-size: 12px;
+    color: #ccc;
+    cursor: pointer;
+}
+footer .f-social .contact i {
+    color: #ddd;
+    padding-right: 0.5rem;
+}
+footer .fa-twitter{
+    background-color: #00acee;
+}
+footer .fa-facebook {
+    background-color: #3b5998;
+}
+footer .fa-linkedin {
+    background-color: #0e76a8;
+}
+footer .fa-youtube {
+    background-color: #c4302b;
+}
+footer .icons i:hover {
+    background: #ff8c00 !important;
+    cursor: pointer;
+}
+ footer .copy {
+     color: #ddd;
+ }
+
+/*==================== MEDIA QUERY =================*/
+/* Medium (md) devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    /* hreo */
+    .hero .container h2 {
+        font-size: 3rem;
+        width: 100%;
+    }
+    .services .title h2 {
+        font-size: 2rem;
+    }
+    .show-services {
+        display: none;
+    }
+
+    /* about */
+    .about {
+        padding-top: 1rem !important;
+    }
+
+    /* action */
+    .action h3 {
+        width: 100%;
+    }
+
+    /* about page */
+    /* bg-grey */
+    .bg-grey .icons {
+        width: 100%;
+        margin-bottom: 2rem !important;
+    }
+    .bg-grey .icons .p-2 i {
+        font-size: 1.75rem;
+        padding-right: 0.5rem;
+    }
+    .bg-grey .icons .p-2 h6 {
+        font-size: 1rem;
+    }
+    /* our team */
+    .card .image .details {
+        left: 0;
+    }
+    .card .image .details i {
+        padding: 0.25rem;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .card:hover .details {
+        left: 0;
+    }
+}
+
+
+/* ====== END ======  */
+/* ==================== HERO ==================  */
+
+/* ====== END ======  */
