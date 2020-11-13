@@ -526,6 +526,12 @@ footer .icons i:hover {
  }
 
 /*==================== MEDIA QUERY =================*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .show-services {
+        display: none !important;
+    }
+}
 /* Medium (md) devices (tablets, 768px and up) */
 @media (max-width: 768px) {
     /* hreo */
@@ -537,7 +543,7 @@ footer .icons i:hover {
         font-size: 2rem;
     }
     .show-services {
-        display: none;
+        display: none !important;
     }
 
     /* about */
